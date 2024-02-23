@@ -9,14 +9,15 @@ const Loginn = () => {
     naviagate("/home");
   };
   return (
-    <div className="flex  w-[100%] h-screen rounded-lg  ml-5  mt-5">
+    <div className="flex w-screen h-screen">
+      {/* Header and Login Form */}
       <div
-        className="w-[50%] h-screen bg-white
-       items-center object-center text-center justify-center pt-24 text-black "
+        className="w-[50%] h-screen flex flex-col
+       items-center justify-center pt-24 text-black "
       >
+        {/* Header section */}
         <h1 className="text-3xl font-bold">Sign in </h1>
-
-        <div className="flex  justify-center items-center object-center  pt-6">
+        <div className="flex  justify-center items-center object-center pt-6">
           <img
             src={Google}
             alt="googleicon"
@@ -29,7 +30,11 @@ const Loginn = () => {
           />
         </div>
         <p className="p-3 text-slate-400 mt-3">or use your account details</p>
-        <form onSubmit={handleSubmit}>
+        {/* Form section */}
+        <form
+          className="flex flex-col items-center justify-center"
+          onSubmit={handleSubmit}
+        >
           <input
             type="text"
             placeholder="Email"
@@ -52,12 +57,13 @@ const Loginn = () => {
           </button>
         </form>
       </div>
+      {/* Image section */}
       <div
         className="w-[50%] h-screen bg-red-500 top-0
        items-center object-center text-center justify-center pt-24 text-white "
       >
         <h1 className="text-4xl mt-32 font-bold"> Hello dear !</h1>
-        <p className="m-auto text-lg mt-5 font-bold text-slate-300">
+        <p className="m-auto text-lg mt-5 font-bold text-white">
           Register now and have an amazing experience <br />
           with us{" "}
         </p>
